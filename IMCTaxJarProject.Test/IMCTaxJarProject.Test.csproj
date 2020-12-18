@@ -1,0 +1,37 @@
+
+<Project Sdk="Microsoft.NET.Sdk">
+
+	<PropertyGroup>
+		<TargetFrameworks>netcoreapp2.0;net452</TargetFrameworks>
+		<RootNamespace>IMCTaxJarProject.Test</RootNamespace>
+		<AssemblyName>IMCTaxJarProject.Test</AssemblyName>
+		<IsPackable>false</IsPackable>
+		<SignAssembly>true</SignAssembly>
+		<ReleaseVersion>3.3.1</ReleaseVersion>
+		<OutputType>Library</OutputType>
+	</PropertyGroup>
+
+	<PropertyGroup Condition=" '$(Configuration)|$(Platform)' == 'Debug|AnyCPU' ">
+		<DebugType>full</DebugType>
+	</PropertyGroup>
+
+	<ItemGroup>
+		<Folder Include="Fixtures\" />
+		<Folder Include="Infrastructure\" />
+	</ItemGroup>
+
+	<ItemGroup>
+		<PackageReference Include="Microsoft.NET.Test.Sdk" Version="15.5.0" />
+		<PackageReference Include="NUnit" Version="3.9.0" />
+		<PackageReference Include="NUnit3TestAdapter" Version="3.9.0" />
+		<PackageReference Include="RestSharp" Version="106.10.1" />
+		<PackageReference Include="Newtonsoft.Json" Version="12.0.3" />
+		<PackageReference Include="WireMock.Net.StandAlone" Version="1.0.19.0" />
+	</ItemGroup>
+
+	<ItemGroup>
+		<ProjectReference Include="..\IMCTaxJarProject\IMCTaxJarProject.csproj" />
+	</ItemGroup>
+
+</Project>
+

@@ -1,0 +1,35 @@
+<Project Sdk="Microsoft.NET.Sdk">
+
+	<PropertyGroup>
+		<TargetFrameworks>netstandard2.0;net452</TargetFrameworks>
+		<AssemblyTitle>IMCTaxJarProject</AssemblyTitle>
+		<Version>3.3.1</Version>
+		<AssemblyName>IMCTaxJarProject</AssemblyName>
+		<PackageId>IMCTaxJarProject</PackageId>
+		<PackageTags>sales;tax;taxes;ecommerce</PackageTags>
+		<RootNamespace>IMCTaxJarProject</RootNamespace>
+		<ReleaseVersion>3.3.1</ReleaseVersion>
+		<DefineConstants Condition=" '$(TargetFramework)' == 'net452' ">NET452</DefineConstants>
+	</PropertyGroup>
+
+	<PropertyGroup Condition=" '$(Configuration)|$(Platform)' == 'Debug|AnyCPU' ">
+		<DebugType>portable</DebugType>
+	</PropertyGroup>
+
+	<ItemGroup>
+	  <Compile Remove="Properties\**" />
+	  <EmbeddedResource Remove="Properties\**" />
+	  <None Remove="Properties\**" />
+	</ItemGroup>
+
+	<ItemGroup>
+		<Folder Include="Model\" />
+		<Folder Include="Infra\" />
+	</ItemGroup>
+
+	<ItemGroup>
+		<PackageReference Include="Newtonsoft.Json" Version="12.0.3" />
+		<PackageReference Include="RestSharp" Version="106.10.1" />
+	</ItemGroup>
+
+</Project>
